@@ -108,7 +108,7 @@ export const putToS3 = async (args: PutToS3Args): Promise<PutImgResult> => {
 };
 
 // args for startExpenseAnalysis
-type ExpenseAnalysisArgs = {
+export type ExpenseAnalysisArgs = {
     textract: TextractClient;
     bucket: string;
     key: string;
