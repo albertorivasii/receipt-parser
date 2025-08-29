@@ -8,9 +8,9 @@
     "@/http":"./src/http.ts",
     "@/errors":"./src/errors.ts",
     "@/aws":"./src/aws.ts",
-    "@/services/": "./src/services/",
     "@/types":"./src/types.ts",
-    "@/storage":"./src/storage.ts"
+    "@/storage":"./src/storage.ts",
+    "@.services/": "./services/"
   },
   "compilerOptions": {
     "lib": ["deno.window", "dom", "dom.iterable", "esnext"]
