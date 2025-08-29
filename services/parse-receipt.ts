@@ -12,14 +12,14 @@ type TextractArgs = {
 };
 
 export const callTextract = async (req:Request, args:TextractArgs, env?:Env): Promise<Response> => {
-    const e = env ?? getEnv()
+    const e = env ?? getEnv();
     
     // make clients
     const supa:SupabaseClient = makeSupabaseClient(req, e);
-    const aws = makeAwsClient(e)    
+    const aws = makeAwsClient(e); 
     
     // download flow
-    const got = await downloadImage(supa, args.bucket, args.path)
+    const got = await downloadImage(supa, args.bucket, args.path);
     if (!got.ok) return errorJson(got.error, 404);
 
     const key = args.s3Key ?? `${e.s3Prefix ? e.s3Prefix + "/":""}${args.path}`;
