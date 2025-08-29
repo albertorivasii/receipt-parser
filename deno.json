@@ -1,0 +1,18 @@
+{
+  "imports": {
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@^2",
+    "@aws-sdk/client-s3": "npm:@aws-sdk/client-s3@^3",
+    "@aws-sdk/client-textract": "npm:@aws-sdk/client-textract@^3",
+    "@supabase/functions-js": "jsr:@supabase/functions-js",
+    "@/env": "./src/env.ts",
+    "@/http":"./src/http.ts",
+    "@/errors":"./src/errors.ts",
+    "@/aws":"./src/aws.ts",
+    "@/services/": "./src/services/",
+    "@/types":"./src/types.ts",
+    "@/storage":"./src/storage.ts"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window", "dom", "dom.iterable", "esnext"]
+  }
+}
