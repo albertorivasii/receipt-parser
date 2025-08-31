@@ -10,7 +10,7 @@
     "@/aws":"./src/aws.ts",
     "@/types":"./src/types.ts",
     "@/storage":"./src/storage.ts",
-    "@.services/": "./services/"
+    "@/services/": "./services/"
   },
   "compilerOptions": {
     "lib": ["deno.window", "dom", "dom.iterable", "esnext"]
