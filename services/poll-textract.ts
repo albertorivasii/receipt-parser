@@ -1,6 +1,5 @@
 import { type TextractClient } from "@aws-sdk/client-textract";
 
-
 // poller output
 type TextractPollOk = { ok: true; raw:unknown };
 type TextractPollErr = { ok: false; error:string; status?:number, requestId?:string };
