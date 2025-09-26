@@ -11,12 +11,12 @@ type TextractArgs = {
     s3Key?:string;
 };
 
-export const callTextract = async (req:Request, args:TextractArgs, env?:Env): Promise<Response> => {
+export const callTextract = async (req:Request, args:TextractArgs, env?:Env, awsClient?:TextractClient): Promise<Response> => {
     const e = env ?? getEnv();
     
     // make clients
     const supa:SupabaseClient = makeSupabaseClient(req, e);
-    const aws = makeAwsClient(e); 
+    const aws = awsClient ?? makeAwsClient(e); 
     
     // download flow
     const got = await downloadImage(supa, args.bucket, args.path);
